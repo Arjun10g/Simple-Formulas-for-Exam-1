@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula Sheet</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script>
+        MathJax.Hub.Config({
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+                inlineMath: [['\\(', '\\)']],
+                displayMath: [['\\[', '\\]']],
+                processEscapes: true
+            },
+            "HTML-CSS": { scale: 90 },
+        });
+    </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jstat/1.7.1/jstat.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js" integrity="sha512-7xTD1meeGGoAzwZKA0Z8YelV3qAvRltuwACWXpnxtneF7VAMztOTAi3t4laVSaE4Znq4LMPeGUIYWEvKEk5r3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js" integrity="sha512-S6SXKUZ11xkCoD/UuhdXG4B4iiCXng+xW2KCx0lgfQqmdqtjqGgm4WChdYIhO1F/CmH21vnkSUvPEgXNgDwkjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <h1>Statistics Formulas</h1>
+<table>
+    <tr>
+        <th>Problem</th>
+        <th>Formula</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td rowspan="1">Summation</td>
+        <td>∑x<sub>i</sub> = x<sub>1</sub> + x<sub>2</sub> + x<sub>3</sub> + ... + x<sub>n</sub></td>
+        <td>The equation is describing the summation of a set of values. It is represented by the symbol ∑ (sigma) and is followed by the values to be summed up. The values are enclosed in parentheses and separated by commas. The subscript i represents the index of the values, which can range from 1 to n. The equation calculates the sum of all the values in the set. </td>
+        <td>Example: ∑i from 1 to 5 = 1 + 2 + 3 + 4 + 5 = 15</td>
+    </tr>
+    <tr>
+        <td>Mean</td>
+        <td>\(\mu = \frac{1}{n} \sum_{i=1}^{n} x_i\)</td>
+        <td>\(\mu:\) This is the symbol used to represent the mean. <br> <br>
+            \(\frac{1}{n}:\) This is the fraction 1 over n, where n is the total number of values in the dataset. It represents the weight given to each value in the dataset when calculating the mean. <br> <br>
+            \(\sum_{i=1}^{n} x_i:\) This is the sum of all the values in the dataset. The symbol \(\sum\) (sigma) represents the sum, and \(x_i\) represents each individual value in the dataset.</td>
+            <td>Example: Calculate the mean of 5, 7, 9, 11, 13<br> <br>\(\mu = \frac{5 + 7 + 9 + 11 + 13}{5} = 9\)</td>
+        </tr>
+    <tr>
+        <td>Standard Deviation</td>
+        <td>\(\sigma = \sqrt{\frac{\sum_{i=1}^{n}(x_i - \mu)^2}{n-1}}\)</td>
+        <td>\(\sigma\) This is the symbol used to represent the standard deviation.<br><br>
+            \(\sqrt{\ }:\) This is the square root symbol, which is used to find the square root of the expression inside the parentheses.<br><br>
+            \(\frac{1}{n}:\) This is the fraction 1 over n, where n is the total number of values in the dataset. It represents the weight given to each value in the dataset when calculating the standard deviation.<br><br>
+            \(\sum_{i=1}^{n}(x_i - \mu)^2:\) This is the sum of the squared differences between each value in the dataset and the mean of the dataset. The symbol \(\sum\) represents the sum, and \(x_i\) represents each individual value in the dataset. \(\mu\) represents the mean of the dataset. The squared differences are summed up and divided by the total number of values in the dataset to get the variance. The square root of the variance gives the standard deviation.</td>
+        <td>Dataset of 5 numbers: 2, 4, 6, 8, and 10. <br><br>
+            
+           Calculate Mean = \(\mu = \frac{1}{n} \sum_{i=1}^{n} x_i\) <br><br>
+            
+            \(\mu = \frac{(2 + 4 + 6 + 8 + 10)}{5}  = \frac{30}{5} = 6\) <br> <br>
+                        
+            Calculate Variance = \(\sigma^2 = \frac{\sum_{i=1}^{n}(x_i - \mu)^2}{n-1}\) <br><br>
+                        
+            
+            \(\sigma^2 = \frac{(2 - 6)^2 + (4 - 6)^2 + (6 - 6)^2 + (8 - 6)^2 + (10 - 6)^2}{5-1} = \frac{20}{5-1} = 5\) <br><br>
+                        
+            Calculate Standard Deviation = \(\sigma = \sqrt{\sigma^2} = \sqrt{4} = 2\)</td>
+    </tr>
+    <tr>
+        <td>Median</td>
+        <td>Median = \(\begin{cases} x_{(n+1)/2} & \text{if } n \text{ is odd} \\ \frac{1}{2}(x_{n/2} + x_{n/2 + 1}) & \text{if } n \text{ is even} \end{cases}\)</td>
+        <td>The median represents the middle value in a dataset when the data is arranged in order. The formula has two cases: <br><br>One for an odd number of data points and one for an even number of data points. 
+            <br><br>It calculates the median as the middle value or the average of the two middle values.</td>
+        <td>Example: Calculate the median for the dataset 4, 6, 9, 11, 15 (odd number of data points).<br><br> Median = \(x_{(5+1)/2} = x_3 = 9\)</td>
+    </tr>
+    <tr>
+        <td>Mode</td>
+        <td>Mode is the most frequent value in a dataset.</td>
+        <td>The mode is the value that appears most frequently in a dataset. Unlike mean and median, which are measures of central tendency, the mode is a measure of data frequency. There can be multiple modes in a dataset, and it's not always guaranteed that a dataset has a mode.</td>
+        <td>Example: In the dataset 2, 4, 4, 6, 8, 8, 8, the mode is 8 as it appears most frequently.</td>
+    </tr>
+    <tr>
+        <td>\(25^{th}\) Quantile</td>
+        <td>\(Q_1 = x_{(n+1)/4}\)</td>
+        <td>The \(25^{th}\) quantile is the value that is greater than 25% of the values in the dataset. It is also known as the first quartile. The formula calculates the \(25^{th}\) quantile as the value that is greater than 25% of the values in the dataset.</td>
+        <td>Example: Calculate the \(25^{th}\) quantile for the dataset 2, 4, 6, 8, 10, 12, 14, 16, 18, 20.<br><br> \(Q_1 = x_{(10+1)/4} = x_3 = 6\)</td>
+    </tr>
+    <tr>
+        <td>\(75^{th}\) Quantile</td>
+        <td>\(Q_3 = x_{3(n+1)/4}\)</td>
+        <td>The \(75^{th}\) quantile is the value that is greater than 75% of the values in the dataset. It is also known as the third quartile. The formula calculates the \(75^{th}\) quantile as the value that is greater than 75% of the values in the dataset.</td>
+        <td>Example: Calculate the \(75^{th}\) quantile for the dataset 2, 4, 6, 8, 10, 12, 14, 16, 18, 20.<br><br> \(Q_3 = x_{3(10+1)/4} = x_8 = 16\)</td>
+    </tr>
+    <tr>
+        <td>Mean (Grouped)</td>
+        <td>\(\mu = \frac{\sum_{i=1}^{n}f_ix_i}{\sum_{i=1}^{n}f_i}\)</td>
+        <td>\(\mu:\) This is the symbol used to represent the mean. <br> <br>
+            \(\sum_{i=1}^{n}f_ix_i:\) This is the sum of the products of the frequencies and the midpoints of the classes. The symbol \(\sum\) (sigma) represents the sum, \(f_i\) represents the frequency of the class, and \(x_i\) represents the midpoint of the class. <br> <br>
+            \(\sum_{i=1}^{n}f_i:\) This is the sum of the frequencies of the classes. The symbol \(\sum\) (sigma) represents the sum, and \(f_i\) represents the frequency of the class.</td>
+        <td>Example: Calculate the mean for the grouped data below. <br><br>
+            <table class = "small">
+                <tr>
+                    <th>Class</th>
+                    <th>Frequency</th>
+                    <th>Midpoint</th>
+                </tr>
+                <tr>
+                    <td>0 - 10</td>
+                    <td>5</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>10 - 20</td>
+                    <td>10</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>20 - 30</td>
+                    <td>15</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>30 - 40</td>
+                    <td>20</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>40 - 50</td>
+                    <td>10</td>
+                    <td>45</td>
+                </tr>
+            </table>
+            <br>
+            \(\mu = \frac{\sum_{i=1}^{n}f_ix_i}{\sum_{i=1}^{n}f_i} = \frac{(5)(5) + (10)(15) + (15)(25) + (20)(35) + (10)(45)}{5 + 10 + 15 + 20 + 10} = \frac{1875}{60} = 31.25\)</td>
+    </tr>
+    <tr>
+        <td>Standard Deviation (Grouped)</td>
+        <td>\(\sigma = \sqrt{\frac{\sum_{i=1}^{n}f_i(x_i - \mu)^2}{\sum_{i=1}^{n}f_i}}\)</td>
+        <td>\(\sigma\) This is the symbol used to represent the standard deviation.<br><br>
+            \(\sqrt{\ }:\) This is the square root symbol, which is used to find the square root of the expression inside the parentheses.<br><br>
+            \(\sum_{i=1}^{n}f_i(x_i - \mu)^2:\) This is the sum of the products of the frequencies and the squared differences between each value in the dataset and the mean of the dataset. The symbol \(\sum\) represents the sum, \(f_i\) represents the frequency of the class, \(x_i\) represents the midpoint of the class, and \(\mu\) represents the mean of the dataset. The squared differences are summed up and divided by the total number of values in the dataset to get the variance. The square root of the variance gives the standard deviation.<br><br
+            \(\sum_{i=1}^{n}f_i:\) This is the sum of the frequencies of the classes. The symbol \(\sum\) (sigma) represents the sum, and \(f_i\) represents the frequency of the class.</td>
+        <td>Example: Calculate the standard deviation for the grouped data below. <br><br>
+            <table class = "small">
+                <tr>
+                    <th>Class</th>
+                    <th>Frequency</th>
+                    <th>Midpoint</th>
+                </tr>
+                <tr>
+                    <td>0 - 10</td>
+                    <td>5</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>10 - 20</td>
+                    <td>10</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>20 - 30</td>
+                    <td>15</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>30 - 40</td>
+                    <td>20</td>
+                    <td>35</td>
+                </tr>
+                <tr>
+                    <td>40 - 50</td>
+                    <td>10</td>
+                    <td>45</td>
+                </tr>
+            </table>
+            <br>
+            \(\sigma = \sqrt{\frac{\sum_{i=1}^{n}f_i(x_i - \mu)^2}{\sum_{i=1}^{n}f_i}}\) <br><br> \(= \sqrt{\frac{(5)(5 - 31.25)^2 + (10)(15 - 31.25)^2 + (15)(25 - 31.25)^2 + (20)(35 - 31.25)^2 + (10)(45 - 31.25)^2}{5 + 10 + 15 + 20 + 10}}\) <br><br> \(= \sqrt{\frac{1875}{60}} = \sqrt{31.25} = 5.59\)</td> 
+    </tr>
+    <tr>
+        <td>Median (Grouped)</td>
+        <td>Median = \(L + \frac{\frac{n}{2} - F}{f} \times w\)</td>
+        <td>Step 1 - Choose Median Group = The first group that contains more than 50% of total observations. <br><br>
+            \(L:\) This is the lower boundary of the class that contains the median. <br><br>
+            \(\frac{n}{2}:\) This is the midpoint of the dataset. <br><br>
+            \(F:\) This is the cumulative frequency of the class <b>preceding</b> the one that contains the median. <br><br>
+            \(f:\) This is the frequency of the class that contains the median. <br><br>
+            \(w:\) This is the width of the class that contains the median.</td>
+        <td>
+            Example: Calculate the median for the grouped data below. <br><br>
+            <table class = "small">
+                <tr>
+                    <th>Class</th>
+                    <th>Frequency</th>
+                </tr>
+                <tr>
+                    <td>0 - 10</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>10 - 20</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>20 - 30</td>
+                    <td>15</td>
+                </tr>
+                <tr>
+                    <td>30 - 40</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>40 - 50</td>
+                    <td>10</td>
+                </tr>
+            </table>
+            <br>
+            Step 1 - Choose Median Group = The first group that contains more than 50% or more of total observations. <br><br>
+            Median Group = 20 - 30 <br><br>
+            \(L = 20\) <br><br>
+            \(\frac{n}{2} = \frac{60}{2} = 30\) <br><br>
+            \(F = 5 + 10 = 15\) <br><br>
+            \(f = 15\) <br><br>
+            \(w = 10\) <br><br>
+            Median = \(L + \frac{\frac{n}{2} - F}{f} \times w = 20 + \frac{30 - 15}{15} \times 10 = 20 + \frac{15}{15} \times 10 = 20 + 10 = 30\)</td>
+    </tr>
+    <tr>
+        <td>Z-Scores</td>
+        <td>\(z = \frac{x - \mu}{\sigma}\)</td>
+        <td>\(z:\) This is the symbol used to represent the z-score. <br><br>
+            \(x:\) This is the value in the dataset. <br><br>
+            \(\mu:\) This is the mean of the dataset. <br><br>
+            \(\sigma:\) This is the standard deviation of the dataset. <br><br>
+            Cross-reference the z-score with the z-score table to find the probability of the value occurring in the dataset.    
+        </td>
+        <td>Example: Calculate the z-score for the value 10 in the dataset 2, 4, 6, 8, 10, 12, 14, 16, 18, 20. <br><br>
+            \(\mu = 10\) <br><br>
+            \(\sigma = 5\) <br><br>
+            \(z = \frac{x - \mu}{\sigma} = \frac{10 - 10}{5} = 0\) <br><br>
+            After Cross-referencing the z-score with the z-score table, the probability of the value 10 occurring in the dataset is 0.5.</td>
+
+    </tr>
+</table>
+</body>
+</html>
